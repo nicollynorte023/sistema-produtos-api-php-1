@@ -1,11 +1,10 @@
-<!-- SIDEBAR -->
-  <div class="sidebar p-3">
+ <div class="sidebar p-3">
     <h5 class="mb-4">Menu</h5>
 
     <nav class="nav flex-column">
-      <a class="nav-link" href="menu.html">Dashboard</a>
-      <a class="nav-link" active href="produtos.html">Product</a>
-      <a class="nav-link " href="adicionar.html">Add Products</a>
+      <a class="nav-link" href="index.php"> Dashboard</a>
+      <a class="nav-link" active href="index.php">Product</a>
+      <a class="nav-link " href="index.php">Add Products</a>
     </nav>
   </div>
 
