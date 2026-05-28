@@ -1,0 +1,269 @@
+
+/* ===== LAYOUT ===== */
+body {
+    background: #f5f6fa;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #e5e5e5;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar .menu-title {
+    font-size: 14px;
+    color: #999;
+    margin-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #f1f3f7;
+    color: #0d6efd;
+}
+
+.main {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+/* ===== HEADER ===== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 300px;
+}
+
+/* ===== CARD ===== */
+.card-custom {
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+}
+
+/* ===== FORM ===== */
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+/* ===== UPLOAD AREA ===== */
+.upload-box {
+    border: 2px dashed #d6d6d6;
+    border-radius: 10px;
+    padding: 60px;
+    text-align: center;
+    color: #777;
+    background: #fafafa;
+}
+
+/* ===== BUTTONS ===== */
+.btn-success {
+    background: #28a745;
+    border: none;
+}
+
+.btn-light {
+    border: 1px solid #ddd;
+}
+body {
+    background:#f5f6fa;
+    font-family: Arial;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width:250px;
+    height:100vh;
+    position:fixed;
+    background:#fff;
+    border-right:1px solid #ddd;
+    padding-top:20px;
+}
+
+.sidebar h4 {
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.sidebar a {
+    display:block;
+    padding:12px 20px;
+    color:#333;
+    text-decoration:none;
+}
+
+.sidebar a:hover {
+    background:#f0f0f0;
+}
+
+.menu-title {
+    font-size:12px;
+    color:#888;
+    margin:15px 20px 5px;
+    text-transform:uppercase;
+}
+
+/* MAIN */
+.main {
+    margin-left:250px;
+    padding:20px;
+}
+
+/* TOPBAR */
+.topbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.topbar-right {
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* SEARCH */
+.search-box {
+    position:relative;
+}
+
+.search-box input {
+    padding:8px 35px 8px 15px;
+    border-radius:20px;
+    border:1px solid #ccc;
+    width:220px;
+}
+
+.search-box span {
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+/* NOTIFICATION */
+.notify {
+    background:#f0f0f0;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* USER */
+.user {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.user img {
+    width:35px;
+    height:35px;
+    border-radius:50%;
+}
+
+/* CARDS */
+.card-icon {
+    font-size:28px;
+}
+ body {
+      background: #f5f6fa;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      height: 100vh;
+      background: #fff;
+      border-right: 1px solid #eee;
+    }
+
+    .sidebar .nav-link {
+      color: #555;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    .sidebar .nav-link.active {
+      color: #0d6efd;
+      font-weight: bold;
+    }
+
+    /* Topbar */
+    .topbar {
+      background: #fff;
+      padding: 10px 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .search-box {
+      background: #f1f3f6;
+      border-radius: 20px;
+      padding: 5px 15px;
+      border: none;
+      width: 250px;
+    }
+
+    /* Cards */
+    .product-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.2s;
+      background: #fff;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .price {
+      font-weight: bold;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #aaa;
+      margin-left: 5px;
+    }
+
+    .discount {
+      color: green;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+
+    .rating {
+      color: #f39c12;
+      font-size: 14px;
+    }
+
+    .btn-cart {
+      background: #28a745;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .btn-cart:hover {
+      background: #218838;
+    }
