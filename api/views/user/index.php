@@ -1,56 +1,95 @@
-<h2>Usuários</h2>
+<div class="sidebar">
 
-<a href="<?= BASE_URL ?>/user/create" class="btn btn-success">
-    Novo Usuário
-</a>
+    <h4>Sistema</h4>
 
-<br><br>
+    <nav>
 
-<table class="table table-bordered">
+        <a class="nav-link" href="<?= BASE_URL ?>">🏠 Dashboard</a>
+        <a class="nav-link" href="<?= BASE_URL ?>/product">📦 Produtos</a>
+        <a class="nav-link" href="<?= BASE_URL ?>/product/create">➕ Novo Produto</a>
+        <a class="nav-link" href="<?= BASE_URL ?>/category">📁 Categorias</a>
+        <a class="nav-link" href="<?= BASE_URL ?>/category/create">➕ Nova Categoria</a>
+        <a class="nav-link" href="<?= BASE_URL ?>/user">👤 Usuários</a>
+        <a class="nav-link" href="<?= BASE_URL ?>/user/create">➕ Novo Usuário</a>
 
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Número</th>
-            <th>Tipo</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
+    </nav>
 
-    <tbody>
+</div>
 
-    <?php foreach($data['users'] as $user): ?>
+<div class="main">
 
-        <tr>
+    <div class="content">
 
-            <td><?= $user['id'] ?></td>
-            <td><?= $user['nome'] ?></td>
-            <td><?= $user['cpf'] ?></td>
-            <td><?= $user['numero'] ?></td>
-            <td><?= $user['type_user'] ?></td>
+        <div class="d-flex justify-content-between align-items-center mb-4">
 
-            <td>
+            <h2>Usuários</h2>
 
-                <a href="<?= BASE_URL ?>/user/show/<?= $user['id'] ?>" class="btn btn-info">
-                    Ver
-                </a>
+            <a href="<?= BASE_URL ?>/user/create"
+               class="btn btn-success">
+                Novo Usuário
+            </a>
 
-                <a href="<?= BASE_URL ?>/user/edit/<?= $user['id'] ?>" class="btn btn-warning">
-                    Editar
-                </a>
+        </div>
 
-                <a href="<?= BASE_URL ?>/user/delete/<?= $user['id'] ?>" class="btn btn-danger">
-                    Excluir
-                </a>
+        <div class="card p-3">
 
-            </td>
+            <table class="table table-hover align-middle mb-0">
 
-        </tr>
+                <thead>
 
-    <?php endforeach; ?>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Número</th>
+                        <th>Tipo</th>
+                        <th width="250">Ações</th>
+                    </tr>
 
-    </tbody>
+                </thead>
 
-</table>
+                <tbody>
+
+                <?php foreach($data['users'] as $user): ?>
+
+                    <tr>
+
+                        <td><?= $user['id'] ?></td>
+                        <td><?= $user['nome'] ?></td>
+                        <td><?= $user['cpf'] ?></td>
+                        <td><?= $user['numero'] ?></td>
+                        <td><?= $user['type_user'] ?></td>
+
+                        <td>
+
+                            <a href="<?= BASE_URL ?>/user/show/<?= $user['id'] ?>"
+                               class="btn btn-info btn-sm">
+                                Ver
+                            </a>
+
+                            <a href="<?= BASE_URL ?>/user/edit/<?= $user['id'] ?>"
+                               class="btn btn-warning btn-sm">
+                                Editar
+                            </a>
+
+                            <a href="<?= BASE_URL ?>/user/delete/<?= $user['id'] ?>"
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('Deseja excluir este usuário?')">
+                                Excluir
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                <?php endforeach; ?>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

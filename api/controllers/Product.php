@@ -20,7 +20,26 @@ class Product extends Controller{
     }
   }
 
+public function create(){
 
+    $Category = $this->model('Category');
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+        $Product = $this->model('Product');
+
+        $Product::create($_POST);
+
+        header('Location: ' . BASE_URL . '/product');
+        exit;
+    }
+
+    $categories = $Category::findAll();
+
+    $this->view('product/create',[
+        'categories' => $categories
+    ]);
+}
   public function edit($id = null){
 
   if (is_numeric($id)) {
@@ -63,6 +82,7 @@ public function delete($id = null){
     $this->pageNotFound();
 
   }
+
 
 }
 }

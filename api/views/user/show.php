@@ -1,34 +1,102 @@
-<h2>Detalhes do Usuário</h2>
+<div class="sidebar">
 
-<table class="table table-bordered">
+    <h4>Sistema</h4>
 
-    <tr>
-        <th>ID</th>
-        <td><?= $data['user']['id'] ?></td>
-    </tr>
+    <nav>
 
-    <tr>
-        <th>Nome</th>
-        <td><?= $data['user']['nome'] ?></td>
-    </tr>
+        <a class="nav-link" href="<?= BASE_URL ?>">🏠 Dashboard</a>
 
-    <tr>
-        <th>CPF</th>
-        <td><?= $data['user']['cpf'] ?></td>
-    </tr>
+        <a class="nav-link" href="<?= BASE_URL ?>/product">
+            📦 Produtos
+        </a>
 
-    <tr>
-        <th>Número</th>
-        <td><?= $data['user']['numero'] ?></td>
-    </tr>
+        <a class="nav-link" href="<?= BASE_URL ?>/product/create">
+            ➕ Novo Produto
+        </a>
 
-    <tr>
-        <th>Tipo</th>
-        <td><?= $data['user']['type_user'] ?></td>
-    </tr>
+        <a class="nav-link" href="<?= BASE_URL ?>/category">
+            📁 Categorias
+        </a>
 
-</table>
+        <a class="nav-link" href="<?= BASE_URL ?>/category/create">
+            ➕ Nova Categoria
+        </a>
 
-<a href="<?= BASE_URL ?>/user" class="btn btn-secondary">
-    Voltar
-</a>
+        <a class="nav-link" href="<?= BASE_URL ?>/user">
+            👤 Usuários
+        </a>
+
+        <a class="nav-link" href="<?= BASE_URL ?>/user/create">
+            ➕ Novo Usuário
+        </a>
+
+    </nav>
+
+</div>
+
+<div class="main">
+
+    <div class="content">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <h2>Detalhes do Usuário</h2>
+
+            <a href="<?= BASE_URL ?>/user"
+               class="btn btn-secondary">
+                Voltar
+            </a>
+
+        </div>
+
+        <div class="card p-4">
+
+            <table class="table table-bordered align-middle mb-0">
+
+                <tr>
+                    <th width="200">ID</th>
+                    <td><?= $data['user']['id'] ?></td>
+                </tr>
+
+                <tr>
+                    <th>Nome</th>
+                    <td><?= $data['user']['nome'] ?></td>
+                </tr>
+
+                <tr>
+                    <th>CPF</th>
+                    <td><?= $data['user']['cpf'] ?></td>
+                </tr>
+
+                <tr>
+                    <th>Número</th>
+                    <td><?= $data['user']['numero'] ?></td>
+                </tr>
+
+                <tr>
+                    <th>Tipo de Usuário</th>
+                    <td><?= $data['user']['type_user'] ?></td>
+                </tr>
+
+            </table>
+
+            <div class="mt-4">
+
+                <a href="<?= BASE_URL ?>/user/edit/<?= $data['user']['id'] ?>"
+                   class="btn btn-warning">
+                    Editar
+                </a>
+
+                <a href="<?= BASE_URL ?>/user/delete/<?= $data['user']['id'] ?>"
+                   class="btn btn-danger"
+                   onclick="return confirm('Deseja excluir este usuário?')">
+                    Excluir
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

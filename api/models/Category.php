@@ -12,7 +12,7 @@ class Category {
         $conn = new Database();
 
         $result = $conn->executeQuery(
-            'SELECT * FROM category'
+            'SELECT * FROM categorias'
         );
 
         return $result->fetchAll(PDO::FETCH_ASSOC);
@@ -23,7 +23,7 @@ class Category {
         $conn = new Database();
 
         $result = $conn->executeQuery(
-            'SELECT * FROM category WHERE id = :ID LIMIT 1',
+            'SELECT * FROM categorias WHERE id = :ID LIMIT 1',
             [
                 ':ID' => $id
             ]
@@ -37,7 +37,7 @@ class Category {
         $conn = new Database();
 
         return $conn->executeQuery(
-            'INSERT INTO category (nome)
+            'INSERT INTO categorias (nome)
              VALUES (:NOME)',
             [
                 ':NOME' => $data['nome']
@@ -50,7 +50,7 @@ class Category {
         $conn = new Database();
 
         return $conn->executeQuery(
-            'UPDATE category
+            'UPDATE categorias
              SET nome = :NOME
              WHERE id = :ID',
             [
@@ -65,7 +65,7 @@ class Category {
         $conn = new Database();
 
         return $conn->executeQuery(
-            'DELETE FROM category
+            'DELETE FROM categorias
              WHERE id = :ID',
             [
                 ':ID' => $id

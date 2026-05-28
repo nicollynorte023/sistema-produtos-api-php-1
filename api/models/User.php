@@ -12,7 +12,7 @@ class User {
         $conn = new Database();
 
         $result = $conn->executeQuery(
-            'SELECT * FROM user'
+            'SELECT * FROM usuarios'
         );
 
         return $result->fetchAll(PDO::FETCH_ASSOC);
@@ -23,7 +23,7 @@ class User {
         $conn = new Database();
 
         $result = $conn->executeQuery(
-            'SELECT * FROM user WHERE id = :ID LIMIT 1',
+            'SELECT * FROM usuarios WHERE id = :ID LIMIT 1',
             [
                 ':ID' => $id
             ]
@@ -37,7 +37,7 @@ class User {
         $conn = new Database();
 
         return $conn->executeQuery(
-            'INSERT INTO user
+            'INSERT INTO usuarios
             (
                 nome,
                 cpf,
@@ -65,7 +65,7 @@ class User {
         $conn = new Database();
 
         return $conn->executeQuery(
-            'UPDATE user SET
+            'UPDATE usuarios SET
                 nome = :NOME,
                 cpf = :CPF,
                 numero = :NUMERO,
@@ -86,7 +86,7 @@ class User {
         $conn = new Database();
 
         return $conn->executeQuery(
-            'DELETE FROM user WHERE id = :ID',
+            'DELETE FROM usuarios WHERE id = :ID',
             [
                 ':ID' => $id
             ]
