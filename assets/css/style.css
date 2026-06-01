@@ -1,0 +1,98 @@
+/* ===== GERAL ===== */
+
+body{
+    margin:0;
+    background:#f5f6fa;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ===== SIDEBAR ===== */
+
+.sidebar{
+    width:180px;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    background:#fff;
+    border-right:1px solid #ddd;
+    padding:20px;
+}
+
+.sidebar h4{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:20px;
+}
+
+.sidebar .nav-link{
+    display:block;
+    color:#333;
+    text-decoration:none;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:5px;
+    transition:.2s;
+}
+
+.sidebar .nav-link:hover{
+    background:#f1f3f5;
+}
+
+/* ===== CONTEÚDO ===== */
+
+.main{
+    margin-left:180px;
+    min-height:100vh;
+    padding:30px;
+}
+
+.content{
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* ===== CARDS ===== */
+
+.card{
+    background:#fff;
+    border:none;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+/* ===== TABELAS ===== */
+
+.table{
+    margin-bottom:0;
+}
+
+.table th{
+    background:#f8f9fa;
+}
+
+/* ===== FORMULÁRIOS ===== */
+
+.form-control,
+.form-select{
+    border-radius:8px;
+}
+
+/* ===== BOTÕES ===== */
+
+.btn{
+    border-radius:8px;
+}
+
+/* ===== TÍTULOS ===== */
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.page-header h2{
+    margin:0;
+}

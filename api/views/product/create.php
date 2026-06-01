@@ -18,7 +18,7 @@
 
     <div class="content">
 
-        <h2 class="mb-4">Editar Produto</h2>
+        <h2 class="mb-4">Novo Produto</h2>
 
         <div class="card p-4">
 
@@ -31,7 +31,6 @@
                         type="text"
                         name="nome"
                         class="form-control"
-                        value="<?= $product['nome'] ?>"
                         required>
                 </div>
 
@@ -42,7 +41,7 @@
                         name="descricao"
                         class="form-control"
                         rows="4"
-                        required><?= $product['descricao'] ?></textarea>
+                        required></textarea>
                 </div>
 
                 <div class="row">
@@ -56,7 +55,6 @@
                             step="0.01"
                             name="preco"
                             class="form-control"
-                            value="<?= $product['preco'] ?>"
                             required>
 
                     </div>
@@ -69,7 +67,6 @@
                             type="number"
                             name="estoque"
                             class="form-control"
-                            value="<?= $product['estoque'] ?>"
                             required>
 
                     </div>
@@ -78,14 +75,22 @@
 
                 <div class="mb-4">
 
-                    <label class="form-label">Categoria ID</label>
+                    <label class="form-label">Categoria</label>
 
-                    <input
-                        type="number"
+                    <select
                         name="categoria_id"
-                        class="form-control"
-                        value="<?= $product['categoria_id'] ?>"
+                        class="form-select"
                         required>
+
+                        <?php foreach($data['categories'] as $category): ?>
+
+                            <option value="<?= $category['id'] ?>">
+                                <?= $category['nome'] ?>
+                            </option>
+
+                        <?php endforeach; ?>
+
+                    </select>
 
                 </div>
 
@@ -93,8 +98,8 @@
 
                     <button
                         type="submit"
-                        class="btn btn-primary">
-                        Atualizar Produto
+                        class="btn btn-success">
+                        Salvar Produto
                     </button>
 
                     <a href="<?= BASE_URL ?>/product"
